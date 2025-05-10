@@ -13,4 +13,4 @@ Even though Super Tux Smash is a 3D game, its gameplay is 2D.
 
 Thus, the coordinate system is right-handed (same as Godot).
 
-![coordsystem.jpg]
+![](coordsystem.jpg)
