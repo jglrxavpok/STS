@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://wtbnvywkh1np"]
+
+[ext_resource type="PackedScene" uid="uid://bqtxj6l4aaqar" path="res://staging/Nunwan/tux.glb" id="1_pwrhv"]
+[ext_resource type="Script" uid="uid://d4ew17u4412e7" path="res://staging/Nunwan/tux.gd" id="1_vkq1w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u174s"]
+radius = 0.267451
+height = 0.897605
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_pwrhv"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(-3.48168, 0, 0.561976, 0, 3.52674, 0, -0.561976, 0, -3.48168, 0, 0, 0)
+collision_mask = 0
+script = ExtResource("1_vkq1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.453012, 0)
+shape = SubResource("CapsuleShape3D_u174s")
+
+[node name="tux2" parent="." instance=ExtResource("1_pwrhv")]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_pwrhv")

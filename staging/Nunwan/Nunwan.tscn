@@ -1,10 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwoxlcok7ixkh"]
 
-[ext_resource type="PackedScene" uid="uid://bqtxj6l4aaqar" path="res://staging/Nunwan/tux.glb" id="1_u174s"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u174s"]
-radius = 0.267451
-height = 0.897605
+[ext_resource type="PackedScene" uid="uid://bmaj8j0qw2ck1" path="res://staging/Nunwan/lobby.tscn" id="1_u174s"]
+[ext_resource type="PackedScene" uid="uid://wtbnvywkh1np" path="res://staging/Nunwan/Tux.tscn" id="2_lwuh0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lwuh0"]
 
@@ -19,15 +16,6 @@ transform = Transform3D(0.999991, 0, 0, 0, 0.999991, 0, 0, 0, 0.999991, 0, 0, 5.
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 
-[node name="CharacterBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(-3.48168, 0, 0.561976, 0, 3.52674, 0, -0.561976, 0, -3.48168, 0, 1.79087, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.453012, 0)
-shape = SubResource("CapsuleShape3D_u174s")
-
-[node name="tux2" parent="CharacterBody3D" instance=ExtResource("1_u174s")]
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
@@ -38,3 +26,10 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00095751, -6.10346e-05, 0.0100098)
 shape = SubResource("BoxShape3D_u174s")
+
+[node name="Lobby" parent="." instance=ExtResource("1_u174s")]
+player_scene = ExtResource("2_lwuh0")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://wtbnvywkh1np")
+spawn_path = NodePath("../Lobby")
