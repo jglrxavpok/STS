@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://rmg3chruyl4"]
+
+[ext_resource type="Script" uid="uid://chslppkifs2eh" path="res://staging/jglrxavpok/character_portraits/portrait_template.gd" id="1_3n5hy"]
+[ext_resource type="Texture2D" uid="uid://mya3d53u8fev" path="res://staging/jglrxavpok/character_portraits/suzanne_small.png" id="1_xxw0w"]
+
+[node name="Suzanne" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_3n5hy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+texture = ExtResource("1_xxw0w")
+expand_mode = 1
