@@ -8,23 +8,19 @@ class_name PlayerSelection
 @export var player_index = 0
 @export var portraits_container: GridContainer
 @export var no_character_selected_texture: Texture2D
+@export var waiting_for_join_texture: Texture2D
 
 @onready var player_icon: TextureRect = $TextureRect
 @onready var player_name_label: Label = $Label
 
+var _joined = false
 var icons: Array[CharacterPortrait] = []
 var row_count = 0;
-var time = 0;
-var debounced = true;
-var last_input_time = 0;
 var hovered_cursor_pos = Vector2i(0, 0)
 var selected_index = -1
 
-var holding_left = false
-var holding_right = false
-
 func has_joined() -> bool:
-	return true # TODO: add a way to join/leave lobby
+	return _joined
 
 func get_icon_rect(icon: CharacterPortrait) -> Rect2:
 	var icon_pos = icon.get_global_transform().get_origin() - get_global_transform().get_origin()
@@ -55,7 +51,7 @@ func change_selected_player():
 		player_icon.texture = hovered.big_texture
 	
 func get_input_full_name(action_name: String):
-	return "player" + str(player_index) + "_" + action_name
+	return Inputs.get_player_input_name(player_index, action_name)
 	
 func handle_inputs(delta: float):
 	if Input.is_action_just_pressed(get_input_full_name("ui_left")):
@@ -69,8 +65,11 @@ func handle_inputs(delta: float):
 		hovered_cursor_pos.y += 1;
 		
 	if Input.is_action_just_pressed(get_input_full_name("ui_back")):
-		unselect_character()
-		
+		if selected_index == -1:
+			leave()
+		else:
+			unselect_character()
+				
 	while(hovered_cursor_pos.x < 0):
 		hovered_cursor_pos.x += portraits_container.columns
 	hovered_cursor_pos.x %= portraits_container.columns
@@ -82,6 +81,15 @@ func handle_inputs(delta: float):
 	if Input.is_action_just_pressed(get_input_full_name("ui_select")):
 		change_selected_player()
 		
+func join():
+	_joined = true
+	player_icon.texture = no_character_selected_texture
+	
+func leave():
+	_joined = false
+	player_icon.texture = waiting_for_join_texture
+	Inputs.remove_player_mapping(player_index)
+		
 func _ready():
 	for character in portraits_container.get_children():
 		icons.append(character)
@@ -89,6 +97,8 @@ func _ready():
 	player_name_label.text = "Player " + str(player_index+1)
 
 func _draw():
+	if not _joined:
+		return
 	var selected_character = get_selected_character()
 	if(selected_character != null):
 		draw_rect(get_icon_rect(selected_character), cursor_color, false, 4.0)
@@ -98,9 +108,7 @@ func _draw():
 		draw_rect(get_icon_rect(hovered_character), cursor_color, false, 10.0)
 	
 func _process(delta: float) -> void:
+	if not _joined:
+		return
 	queue_redraw()
-	time += delta
 	handle_inputs(delta)
-	
-	if time - last_input_time > debounce_time:
-		debounced = true

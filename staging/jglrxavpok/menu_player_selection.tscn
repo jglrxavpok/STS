@@ -1,0 +1,165 @@
+[gd_scene load_steps=13 format=3 uid="uid://ddjfm1xl4sune"]
+
+[ext_resource type="Script" uid="uid://1si0nvbhj2gj" path="res://staging/jglrxavpok/player_selection.gd" id="1_a7o6c"]
+[ext_resource type="Texture2D" uid="uid://diym4va3xsk56" path="res://staging/jglrxavpok/character_portraits/suzanne.png" id="2_chi0b"]
+[ext_resource type="Texture2D" uid="uid://cf35tc3eeq4bd" path="res://staging/jglrxavpok/character_portraits/tux.png" id="3_n0nrk"]
+[ext_resource type="Texture2D" uid="uid://jgejsmyqls46" path="res://staging/jglrxavpok/character_portraits/godette.png" id="4_ei5mv"]
+[ext_resource type="PackedScene" uid="uid://rmg3chruyl4" path="res://staging/jglrxavpok/character_portraits/portrait_template.tscn" id="5_mre4x"]
+[ext_resource type="Texture2D" uid="uid://mya3d53u8fev" path="res://staging/jglrxavpok/character_portraits/suzanne_small.png" id="6_rmyea"]
+[ext_resource type="Texture2D" uid="uid://5fu2rr5m8owu" path="res://staging/jglrxavpok/character_portraits/tux_small.png" id="7_3h0s8"]
+[ext_resource type="Texture2D" uid="uid://b06e83ypmx31r" path="res://staging/jglrxavpok/character_portraits/godette_small.png" id="8_pvl3r"]
+[ext_resource type="PackedScene" uid="uid://dl2k5xtdohuyw" path="res://staging/jglrxavpok/player_selection.tscn" id="9_7vckf"]
+[ext_resource type="Texture2D" uid="uid://ct6lvy5qto2mp" path="res://staging/jglrxavpok/character_portraits/none.png" id="10_qvxti"]
+[ext_resource type="Texture2D" uid="uid://dy01vcvxonl2c" path="res://staging/jglrxavpok/character_portraits/waiting_for_join.png" id="11_chi0b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_arekd"]
+font_size = 211
+font_color = Color(0.84, 1, 0.4, 1)
+
+[node name="PlayerSelectionScreen" type="PanelContainer" node_paths=PackedStringArray("players_container", "ready_container")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a7o6c")
+players_container = NodePath("VBoxContainer/Players")
+ready_container = NodePath("ReadyContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"HeaderLarge"
+text = "Select a character!"
+horizontal_alignment = 1
+
+[node name="Suzanne" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(348, -584)
+texture = ExtResource("2_chi0b")
+
+[node name="Tux" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(840, -603)
+texture = ExtResource("3_n0nrk")
+
+[node name="Godette" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(1274, -606)
+texture = ExtResource("4_ei5mv")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerPortraits" type="GridContainer" parent="VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 6
+
+[node name="Suzanne" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("2_chi0b")
+small_texture = ExtResource("6_rmyea")
+character_name = "suzanne"
+
+[node name="Tux" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("3_n0nrk")
+small_texture = ExtResource("7_3h0s8")
+character_name = "tux"
+
+[node name="Godette" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("4_ei5mv")
+small_texture = ExtResource("8_pvl3r")
+character_name = "godette"
+
+[node name="Suzanne2" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("2_chi0b")
+small_texture = ExtResource("6_rmyea")
+character_name = "suzanne"
+
+[node name="Tux2" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("3_n0nrk")
+small_texture = ExtResource("7_3h0s8")
+character_name = "tux"
+
+[node name="Godette2" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("4_ei5mv")
+small_texture = ExtResource("8_pvl3r")
+character_name = "godette"
+
+[node name="Suzanne3" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("2_chi0b")
+small_texture = ExtResource("6_rmyea")
+character_name = "suzanne"
+
+[node name="Tux3" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("3_n0nrk")
+small_texture = ExtResource("7_3h0s8")
+character_name = "tux"
+
+[node name="Godette3" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("4_ei5mv")
+small_texture = ExtResource("8_pvl3r")
+character_name = "godette"
+
+[node name="Suzanne4" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("2_chi0b")
+small_texture = ExtResource("6_rmyea")
+character_name = "suzanne"
+
+[node name="Tux4" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("3_n0nrk")
+small_texture = ExtResource("7_3h0s8")
+character_name = "tux"
+
+[node name="Godette4" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+layout_mode = 2
+big_texture = ExtResource("4_ei5mv")
+small_texture = ExtResource("8_pvl3r")
+character_name = "godette"
+
+[node name="Players" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Player1" parent="VBoxContainer/Players" node_paths=PackedStringArray("portraits_container") instance=ExtResource("9_7vckf")]
+layout_mode = 2
+portraits_container = NodePath("../../PanelContainer/PlayerPortraits")
+no_character_selected_texture = ExtResource("10_qvxti")
+waiting_for_join_texture = ExtResource("11_chi0b")
+
+[node name="Player2" parent="VBoxContainer/Players" node_paths=PackedStringArray("portraits_container") instance=ExtResource("9_7vckf")]
+layout_mode = 2
+cursor_color = Color(0, 0, 1, 1)
+player_index = 1
+portraits_container = NodePath("../../PanelContainer/PlayerPortraits")
+no_character_selected_texture = ExtResource("10_qvxti")
+waiting_for_join_texture = ExtResource("11_chi0b")
+
+[node name="ReadyContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="ReadyContainer"]
+z_index = 100
+layout_mode = 2
+text = "READY!"
+label_settings = SubResource("LabelSettings_arekd")
+horizontal_alignment = 1
