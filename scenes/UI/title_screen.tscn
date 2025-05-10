@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0rtocanvy4cj"]
+
+[ext_resource type="Theme" uid="uid://bj08t5383cugo" path="res://themes/STS.tres" id="1_tqu6r"]
+[ext_resource type="PackedScene" uid="uid://okyo4drrphuu" path="res://scenes/characters/kenney/kenney.tscn" id="2_h4af5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kki4"]
+bg_color = Color(0.784508, 0.471188, 0.752211, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as2jb"]
+bg_color = Color(0.25462, 0.671224, 0.685865, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kkde"]
+bg_color = Color(0.334213, 0.689309, 0.416264, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tqu6r")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.537029, 0.17221, 0.216747, 1)
+theme_override_colors/font_shadow_color = Color(0.902304, 0.264524, 0.709298, 1)
+text = "SUPER TUX SMASH"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 650
+
+[node name="GameModes" type="VBoxContainer" parent="VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.09
+
+[node name="LocalButton" type="Button" parent="VSplitContainer/HSplitContainer/GameModes"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_tqu6r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8kki4")
+text = "Local"
+alignment = 0
+
+[node name="Multi Button" type="Button" parent="VSplitContainer/HSplitContainer/GameModes"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_as2jb")
+text = "Multi"
+alignment = 0
+
+[node name="Training button" type="Button" parent="VSplitContainer/HSplitContainer/GameModes"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1kkde")
+text = "Training"
+alignment = 0
+
+[node name="News" type="VSplitContainer" parent="VSplitContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/HSplitContainer/News"]
+layout_mode = 2
+
+[node name="What\'s new" type="Label" parent="VSplitContainer/HSplitContainer/News/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "What's new ? "
+
+[node name="News" type="Label" parent="VSplitContainer/HSplitContainer/News/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Kenney the new challenger"
+
+[node name="Aperçu" type="SubViewportContainer" parent="VSplitContainer/HSplitContainer/News"]
+layout_mode = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VSplitContainer/HSplitContainer/News/Aperçu"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(938, 766)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="VSplitContainer/HSplitContainer/News/Aperçu/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.908599)
+
+[node name="Kenney" parent="VSplitContainer/HSplitContainer/News/Aperçu/SubViewport" instance=ExtResource("2_h4af5")]
+process_mode = 4
+disable_mode = 1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="VSplitContainer/HSplitContainer/News/Aperçu/SubViewport"]
