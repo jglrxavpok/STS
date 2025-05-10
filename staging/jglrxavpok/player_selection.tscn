@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl2k5xtdohuyw"]
+
+[ext_resource type="Script" uid="uid://ooowsm2ltbio" path="res://staging/jglrxavpok/player-cursor.gd" id="1_p83kf"]
+[ext_resource type="Texture2D" uid="uid://ct6lvy5qto2mp" path="res://staging/jglrxavpok/character_portraits/none.png" id="2_p83kf"]
+
+[node name="Player1" type="VBoxContainer"]
+z_index = 2
+script = ExtResource("1_p83kf")
+movement_speed = 500.0
+debounce_time = 0.1
+cursor_color = Color(1, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+texture = ExtResource("2_p83kf")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Player1"
+horizontal_alignment = 1
