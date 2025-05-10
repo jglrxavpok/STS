@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0rtocanvy4cj"]
+[gd_scene load_steps=7 format=3 uid="uid://b0rtocanvy4cj"]
 
 [ext_resource type="Theme" uid="uid://bj08t5383cugo" path="res://themes/STS.tres" id="1_tqu6r"]
 [ext_resource type="PackedScene" uid="uid://okyo4drrphuu" path="res://scenes/characters/kenney/kenney.tscn" id="2_h4af5"]
+[ext_resource type="Script" uid="uid://bx4u428pyt54p" path="res://scenes/UI/title_screen.gd" id="2_wctsj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kki4"]
 bg_color = Color(0.784508, 0.471188, 0.752211, 1)
@@ -20,6 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_tqu6r")
+script = ExtResource("2_wctsj")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -53,7 +55,7 @@ split_offset = 650
 layout_mode = 2
 size_flags_stretch_ratio = 1.09
 
-[node name="LocalButton" type="Button" parent="VSplitContainer/HSplitContainer/GameModes"]
+[node name="Local Button" type="Button" parent="VSplitContainer/HSplitContainer/GameModes"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_tqu6r")
@@ -110,3 +112,7 @@ process_mode = 4
 disable_mode = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="VSplitContainer/HSplitContainer/News/Aperçu/SubViewport"]
+
+[connection signal="pressed" from="VSplitContainer/HSplitContainer/GameModes/Local Button" to="." method="_on_local_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/HSplitContainer/GameModes/Multi Button" to="." method="_on_multi_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/HSplitContainer/GameModes/Training button" to="." method="_on_training_button_pressed"]

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb30feyepgiw0"]
+[gd_scene load_steps=5 format=3 uid="uid://bb30feyepgiw0"]
 
+[ext_resource type="Script" uid="uid://dhynyyiuel161" path="res://scenes/UI/main_ui.gd" id="1_40uwi"]
 [ext_resource type="PackedScene" uid="uid://b0rtocanvy4cj" path="res://scenes/UI/title_screen.tscn" id="1_mhwba"]
+[ext_resource type="PackedScene" uid="uid://ddjfm1xl4sune" path="res://staging/jglrxavpok/menu_player_selection.tscn" id="3_mjobh"]
+[ext_resource type="PackedScene" uid="uid://bmaj8j0qw2ck1" path="res://staging/Nunwan/MultiLobby.tscn" id="4_v16yk"]
 
 [node name="MainUI" type="Control"]
 layout_mode = 3
@@ -9,6 +12,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_40uwi")
 
 [node name="Menu" parent="." instance=ExtResource("1_mhwba")]
 layout_mode = 1
+
+[node name="PlayerSelectionScreen" parent="." instance=ExtResource("3_mjobh")]
+visible = false
+layout_mode = 1
+offset_bottom = 0.0
+
+[node name="MultiLobby" parent="." instance=ExtResource("4_v16yk")]
+visible = false
+layout_mode = 1
+
+[connection signal="local_mode_chosen" from="Menu" to="." method="_on_menu_local_mode_chosen"]
+[connection signal="multi_mode_chosen" from="Menu" to="." method="_on_menu_multi_mode_chosen"]
+[connection signal="training_mode_chosen" from="Menu" to="." method="_on_menu_training_mode_chosen"]
