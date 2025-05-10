@@ -1,35 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwoxlcok7ixkh"]
+[gd_scene load_steps=3 format=3 uid="uid://bwoxlcok7ixkh"]
 
-[ext_resource type="PackedScene" uid="uid://bmaj8j0qw2ck1" path="res://staging/Nunwan/lobby.tscn" id="1_u174s"]
+[ext_resource type="PackedScene" uid="uid://bmaj8j0qw2ck1" path="res://staging/Nunwan/MultiLobby.tscn" id="1_u174s"]
 [ext_resource type="PackedScene" uid="uid://wtbnvywkh1np" path="res://staging/Nunwan/Tux.tscn" id="2_lwuh0"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_lwuh0"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_u174s"]
-size = Vector3(6.29847, 0.429565, 3.70654)
 
 [node name="Nunwan" type="Node3D"]
 transform = Transform3D(1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999991, 0, 0, 0, 0.999991, 0, 0, 0, 0.999991, 0, 0, 5.82693)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(6.31032, 0, 0, 0, 0.428727, 0, 0, 0, 3.69781, 0, 0, 0)
-mesh = SubResource("BoxMesh_lwuh0")
-skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00095751, -6.10346e-05, 0.0100098)
-shape = SubResource("BoxShape3D_u174s")
-
-[node name="Lobby" parent="." instance=ExtResource("1_u174s")]
+[node name="MultiLobby" parent="." instance=ExtResource("1_u174s")]
 player_scene = ExtResource("2_lwuh0")
-
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("uid://wtbnvywkh1np")
-spawn_path = NodePath("../Lobby")
