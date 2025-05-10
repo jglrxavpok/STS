@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsp037j32lvp1"]
+
+[ext_resource type="Script" uid="uid://cvukjnfd47di0" path="res://scenes/characters/chara_base/chara_base.gd" id="1_clblc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lgyj2"]
+resource_local_to_scene = true
+
+[node name="CharaBase" type="CharacterBody3D"]
+script = ExtResource("1_clblc")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_lgyj2")

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0y0v863k2he4"
-path.s3tc="res://.godot/imported/kenney.png-599e092ed4bde75b7bfb58becc52b58a.s3tc.ctex"
+path.s3tc="res://.godot/imported/kenney.png-78743f0452ca2f7f5a60a690f2ed5312.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://staging/jvernay/kenney.png"
-dest_files=["res://.godot/imported/kenney.png-599e092ed4bde75b7bfb58becc52b58a.s3tc.ctex"]
+source_file="res://scenes/characters/kenney/kenney.png"
+dest_files=["res://.godot/imported/kenney.png-78743f0452ca2f7f5a60a690f2ed5312.s3tc.ctex"]
 
 [params]
 

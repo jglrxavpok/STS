@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://okyo4drrphuu"]
+
+[ext_resource type="PackedScene" uid="uid://bsp037j32lvp1" path="res://scenes/characters/chara_base/chara_base.tscn" id="1_3fjdl"]
+[ext_resource type="Script" uid="uid://cbpr4pmf43dic" path="res://scenes/characters/kenney/kenney.gd" id="2_waxpx"]
+[ext_resource type="Texture2D" uid="uid://b0y0v863k2he4" path="res://scenes/characters/kenney/kenney.png" id="3_crl6p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_waxpx"]
+resource_local_to_scene = true
+radius = 0.4
+height = 1.0
+
+[node name="Kenney" instance=ExtResource("1_3fjdl")]
+script = ExtResource("2_waxpx")
+
+[node name="Collider" parent="." index="0"]
+shape = SubResource("CapsuleShape3D_waxpx")
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="1"]
+transform = Transform3D(1, 1.13133e-08, 1.48944e-09, -1.13134e-08, 0.965926, 0.258819, 1.48939e-09, -0.258819, 0.965926, 0, 0.193823, 0)
+shaded = true
+alpha_cut = 2
+texture = ExtResource("3_crl6p")
+region_enabled = true
+region_rect = Rect2(0, 128, 128, 128)

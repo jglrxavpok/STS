@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b1bcqcmpi5vic" path="res://scenes/maps/placeholder/texture_10.png" id="2_2pvw8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3mlxh"]
-size = Vector3(6, 2, 10)
+size = Vector3(10, 2, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhm3b"]
 albedo_texture = ExtResource("1_k803h")
@@ -14,11 +14,10 @@ uv2_scale = Vector3(6, 6, 6)
 
 [sub_resource type="BoxMesh" id="BoxMesh_k803h"]
 material = SubResource("StandardMaterial3D_qhm3b")
-size = Vector3(6, 2, 10)
+size = Vector3(10, 2, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1uih"]
 albedo_texture = ExtResource("2_2pvw8")
-uv1_scale = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 
 [sub_resource type="PrismMesh" id="PrismMesh_78kd7"]
@@ -36,5 +35,5 @@ mesh = SubResource("BoxMesh_k803h")
 skeleton = NodePath("../..")
 
 [node name="Bush1" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, 2.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 1.5, -2)
 mesh = SubResource("PrismMesh_78kd7")
