@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddjfm1xl4sune"]
+
+[ext_resource type="Script" uid="uid://ooowsm2ltbio" path="res://staging/jglrxavpok/player_select.gd" id="1_ugelf"]
+[ext_resource type="Texture2D" uid="uid://diym4va3xsk56" path="res://staging/jglrxavpok/character_portraits/suzanne.png" id="1_y5dxm"]
+[ext_resource type="Texture2D" uid="uid://cf35tc3eeq4bd" path="res://staging/jglrxavpok/character_portraits/tux.png" id="2_ugelf"]
+[ext_resource type="Texture2D" uid="uid://jgejsmyqls46" path="res://staging/jglrxavpok/character_portraits/godette.png" id="4_56twl"]
+
+[node name="TitleScreen" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ugelf")
+debounce_time = 0.1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"HeaderLarge"
+text = "Select a character!"
+horizontal_alignment = 1
+
+[node name="SelectedLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 8
+theme_type_variation = &"HeaderLarge"
+text = "Nothing selected"
+horizontal_alignment = 1
+
+[node name="Suzanne" type="Sprite2D" parent="."]
+position = Vector2(348, 410)
+texture = ExtResource("1_y5dxm")
+
+[node name="Tux" type="Sprite2D" parent="."]
+position = Vector2(840, 391)
+texture = ExtResource("2_ugelf")
+
+[node name="Godette" type="Sprite2D" parent="."]
+position = Vector2(1274, 388)
+texture = ExtResource("4_56twl")
