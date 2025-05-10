@@ -5,6 +5,7 @@ extends PanelContainer
 var player_list: Array[PlayerSelection] = []
 
 func _ready() -> void:
+	Inputs.reset_mappings()
 	for player in players_container.get_children():
 		player_list.append(player)
 		
@@ -17,8 +18,8 @@ func find_first_free_player_slot() -> int:
 func handle_inputs() -> void:
 	for player in player_list:
 		if Input.is_action_just_pressed(player.get_input_full_name("menu")):
-			print("READY!!")
-			# TODO: switch to level select screen
+			# TODO: change to proper filename
+			get_tree().change_scene_to_file("res://staging/jglrxavpok/map_selection/menu_map_selection.tscn")
 			break
 	
 	# handle player joining logic (leave is done in player_cursor.gd)

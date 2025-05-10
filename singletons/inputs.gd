@@ -67,3 +67,16 @@ func get_player_input_name(player_index: int, action_name: String) -> String:
 
 func has_player_associated(gamepad_index: int) -> bool:
 	return _gamepad2player_mapping[gamepad_index] != -1
+	
+# Finds the index of the first player actually playing (player 1 is not always present)
+func find_first_player() -> int:
+	for player_index in range(player_count):
+		if _player2gamepad_mapping[player_index] != -1:
+			return player_index
+	return -1
+	
+func reset_mappings() -> void:
+	_gamepad2player_mapping.fill(-1)
+	_player2gamepad_mapping.fill(-1)
+	for p in range(player_count):
+		remove_player_mapping(p)

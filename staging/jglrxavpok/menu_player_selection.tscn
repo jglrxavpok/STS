@@ -146,11 +146,11 @@ waiting_for_join_texture = ExtResource("11_chi0b")
 
 [node name="Player2" parent="VBoxContainer/Players" node_paths=PackedStringArray("portraits_container") instance=ExtResource("9_7vckf")]
 layout_mode = 2
-cursor_color = Color(0, 0, 1, 1)
 player_index = 1
 portraits_container = NodePath("../../PanelContainer/PlayerPortraits")
 no_character_selected_texture = ExtResource("10_qvxti")
 waiting_for_join_texture = ExtResource("11_chi0b")
+cursor_color = Color(0, 0, 1, 1)
 
 [node name="ReadyContainer" type="PanelContainer" parent="."]
 visible = false

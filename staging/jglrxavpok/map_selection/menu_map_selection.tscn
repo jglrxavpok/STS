@@ -1,0 +1,164 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsm6jfqgmub2k"]
+
+[ext_resource type="Script" uid="uid://clfpjgcrtfpau" path="res://staging/jglrxavpok/map_selection/menu_map_selection.gd" id="1_rt5dn"]
+[ext_resource type="Texture2D" uid="uid://diym4va3xsk56" path="res://staging/jglrxavpok/character_portraits/suzanne.png" id="2_2y3mc"]
+[ext_resource type="Texture2D" uid="uid://cf35tc3eeq4bd" path="res://staging/jglrxavpok/character_portraits/tux.png" id="3_0wm8v"]
+[ext_resource type="Texture2D" uid="uid://jgejsmyqls46" path="res://staging/jglrxavpok/character_portraits/godette.png" id="4_vntqb"]
+[ext_resource type="Texture2D" uid="uid://bnbc5dfm8to6s" path="res://staging/jglrxavpok/map_selection/level_1.png" id="5_hq1rf"]
+[ext_resource type="PackedScene" uid="uid://dvk6xenyv4hx8" path="res://staging/jglrxavpok/map_selection/map_icon.tscn" id="5_rt5dn"]
+[ext_resource type="Texture2D" uid="uid://dp1liwwtmyhr1" path="res://staging/jglrxavpok/map_selection/level_2.png" id="7_bh1tm"]
+[ext_resource type="Texture2D" uid="uid://dt8u4h24677ib" path="res://staging/jglrxavpok/map_selection/level_3.png" id="8_uy54v"]
+
+[node name="PlayerSelectionScreen" type="PanelContainer" node_paths=PackedStringArray("levels_container")]
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rt5dn")
+levels_container = NodePath("VBoxContainer/PanelContainer/Levels")
+cursor_color = Color(1, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"HeaderLarge"
+text = "<Player> must select a level!"
+horizontal_alignment = 1
+
+[node name="Suzanne" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(348, -584)
+texture = ExtResource("2_2y3mc")
+
+[node name="Tux" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(840, -603)
+texture = ExtResource("3_0wm8v")
+
+[node name="Godette" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(1274, -606)
+texture = ExtResource("4_vntqb")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Levels" type="GridContainer" parent="VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 6
+
+[node name="level_1" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 1"
+scene_name = "level_1"
+thumbnail = ExtResource("5_hq1rf")
+
+[node name="level_2" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 2"
+scene_name = "level_2"
+thumbnail = ExtResource("7_bh1tm")
+
+[node name="level_3" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 3"
+scene_name = "level_3"
+thumbnail = ExtResource("8_uy54v")
+
+[node name="level_4" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 1"
+scene_name = "level_1"
+thumbnail = ExtResource("5_hq1rf")
+
+[node name="level_5" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 2"
+scene_name = "level_2"
+thumbnail = ExtResource("7_bh1tm")
+
+[node name="level_6" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 3"
+scene_name = "level_3"
+thumbnail = ExtResource("8_uy54v")
+
+[node name="level_7" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 1"
+scene_name = "level_1"
+thumbnail = ExtResource("5_hq1rf")
+
+[node name="level_8" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 2"
+scene_name = "level_2"
+thumbnail = ExtResource("7_bh1tm")
+
+[node name="level_9" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 3"
+scene_name = "level_3"
+thumbnail = ExtResource("8_uy54v")
+
+[node name="level_10" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 1"
+scene_name = "level_1"
+thumbnail = ExtResource("5_hq1rf")
+
+[node name="level_11" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 2"
+scene_name = "level_2"
+thumbnail = ExtResource("7_bh1tm")
+
+[node name="level_12" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 3"
+scene_name = "level_3"
+thumbnail = ExtResource("8_uy54v")
+
+[node name="level_13" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 1"
+scene_name = "level_1"
+thumbnail = ExtResource("5_hq1rf")
+
+[node name="level_14" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 2"
+scene_name = "level_2"
+thumbnail = ExtResource("7_bh1tm")
+
+[node name="level_15" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 3"
+scene_name = "level_3"
+thumbnail = ExtResource("8_uy54v")
+
+[node name="level_16" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 1"
+scene_name = "level_1"
+thumbnail = ExtResource("5_hq1rf")
+
+[node name="level_17" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 2"
+scene_name = "level_2"
+thumbnail = ExtResource("7_bh1tm")
+
+[node name="level_18" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
+layout_mode = 2
+displayed_name = "Level 3"
+scene_name = "level_3"
+thumbnail = ExtResource("8_uy54v")
