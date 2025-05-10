@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cosrj2doburlf"]
+[gd_scene load_steps=6 format=3 uid="uid://cosrj2doburlf"]
 
 [ext_resource type="Script" uid="uid://nerg4rbscfgr" path="res://staging/jvernay/terrain.gd" id="1_ddngf"]
+[ext_resource type="PackedScene" uid="uid://8mescl61mtsf" path="res://scenes/ui/hud.tscn" id="4_2jbwc"]
 [ext_resource type="PackedScene" uid="uid://c2tpfw4h46si4" path="res://scenes/maps/placeholder/placeholder.tscn" id="4_d0fn6"]
 [ext_resource type="PackedScene" uid="uid://okyo4drrphuu" path="res://scenes/characters/kenney/kenney.tscn" id="5_2jbwc"]
 
@@ -35,3 +36,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Kenney" parent="." instance=ExtResource("5_2jbwc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Hud" parent="." instance=ExtResource("4_2jbwc")]

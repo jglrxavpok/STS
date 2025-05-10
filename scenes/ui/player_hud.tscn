@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4ovuqdb0f3au"]
+
+[ext_resource type="Texture2D" uid="uid://mya3d53u8fev" path="res://staging/jglrxavpok/character_portraits/suzanne_small.png" id="1_e6e0b"]
+[ext_resource type="Script" uid="uid://y1dpjyewpqd7" path="res://scenes/ui/player_hud.gd" id="1_u7a8l"]
+[ext_resource type="Texture2D" uid="uid://d0xnkhkidmjhd" path="res://scenes/ui/player_hud_background.png" id="1_u16pa"]
+[ext_resource type="Texture2D" uid="uid://ccd65teabsstc" path="res://scenes/ui/player_hud_life.png" id="3_u7a8l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hbwp2"]
+font_size = 106
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(650, 250)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -950.0
+offset_bottom = -650.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7a8l")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -13.0
+offset_right = 655.0
+offset_bottom = 237.0
+scale = Vector2(0.96, 0.96)
+texture = ExtResource("1_u16pa")
+
+[node name="CharacterIcon" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("1_e6e0b")
+
+[node name="Lives" type="HFlowContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+offset_top = 179.0
+offset_right = 200.0
+offset_bottom = 224.0
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Life1" type="TextureRect" parent="Lives"]
+layout_mode = 2
+texture = ExtResource("3_u7a8l")
+
+[node name="Life2" type="TextureRect" parent="Lives"]
+layout_mode = 2
+texture = ExtResource("3_u7a8l")
+
+[node name="Life3" type="TextureRect" parent="Lives"]
+layout_mode = 2
+texture = ExtResource("3_u7a8l")
+
+[node name="DamageIndicator" type="Label" parent="."]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 31.0
+offset_right = 504.0
+offset_bottom = 177.0
+text = "100%"
+label_settings = SubResource("LabelSettings_hbwp2")
+
+[node name="PlayerNumber" type="Label" parent="."]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -72.0
+offset_right = 239.0
+offset_bottom = 74.0
+text = "1"
+label_settings = SubResource("LabelSettings_hbwp2")

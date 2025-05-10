@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://8mescl61mtsf"]
+
+[ext_resource type="PackedScene" uid="uid://b4ovuqdb0f3au" path="res://scenes/ui/player_hud.tscn" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://321bvrsvx0og" path="res://scenes/ui/hud.gd" id="1_hqnrr"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hqnrr")
+
+[node name="Players" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 764.0
+offset_right = 2652.0
+offset_bottom = 1776.0
+scale = Vector2(0.6, 0.6)
+columns = 4
+
+[node name="Player1" parent="Players" instance=ExtResource("1_0mwgc")]
+layout_mode = 2
+
+[node name="Player2" parent="Players" instance=ExtResource("1_0mwgc")]
+layout_mode = 2
+player_index = 1
+
+[node name="Player3" parent="Players" instance=ExtResource("1_0mwgc")]
+layout_mode = 2
+player_index = 2
+
+[node name="Player4" parent="Players" instance=ExtResource("1_0mwgc")]
+layout_mode = 2
+player_index = 3
