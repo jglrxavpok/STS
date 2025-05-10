@@ -1,19 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://cosrj2doburlf"]
+[gd_scene load_steps=7 format=3 uid="uid://cosrj2doburlf"]
 
 [ext_resource type="Script" uid="uid://sdghg8ca3ryc" path="res://staging/jvernay/kenney.gd" id="1_0k3k7"]
 [ext_resource type="Texture2D" uid="uid://b0y0v863k2he4" path="res://staging/jvernay/kenney.png" id="1_2is8l"]
 [ext_resource type="Script" uid="uid://nerg4rbscfgr" path="res://staging/jvernay/terrain.gd" id="1_ddngf"]
+[ext_resource type="PackedScene" uid="uid://c2tpfw4h46si4" path="res://scenes/maps/placeholder/placeholder.tscn" id="4_d0fn6"]
 
 [sub_resource type="Environment" id="Environment_ddngf"]
 background_mode = 1
 background_color = Color(0.461745, 0.691611, 0.88588, 1)
 background_energy_multiplier = 0.69
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_wppqd"]
-size = Vector3(6, 2, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_wppqd"]
-size = Vector3(6, 2, 10)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wppqd"]
 height = 1.0
@@ -21,16 +16,6 @@ height = 1.0
 [node name="JVernay" type="WorldEnvironment"]
 environment = SubResource("Environment_ddngf")
 script = ExtResource("1_ddngf")
-
-[node name="Terrain" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain"]
-shape = SubResource("BoxShape3D_wppqd")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
-mesh = SubResource("BoxMesh_wppqd")
-skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-3.78552e-08, -0.5, 0.866025, -2.18557e-08, 0.866025, 0.5, -1, 5.32907e-15, -4.37114e-08, 6, 3, 0)
@@ -64,3 +49,6 @@ spot_angle_attenuation = 30.3144
 transform = Transform3D(0.965926, -1.13133e-08, 0.258819, -0.258819, -4.2222e-08, 0.965926, 0, -1, -4.37114e-08, 0, 8, 0)
 light_energy = 0.2
 light_specular = 8.396
+
+[node name="Map_Placeholder" parent="." instance=ExtResource("4_d0fn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)

@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2tpfw4h46si4"]
+
+[ext_resource type="Texture2D" uid="uid://bamlumdwg4u33" path="res://scenes/maps/placeholder/texture_01.png" id="1_k803h"]
+[ext_resource type="Texture2D" uid="uid://b1bcqcmpi5vic" path="res://scenes/maps/placeholder/texture_10.png" id="2_2pvw8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mlxh"]
+size = Vector3(6, 2, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhm3b"]
+albedo_texture = ExtResource("1_k803h")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv2_scale = Vector3(6, 6, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k803h"]
+material = SubResource("StandardMaterial3D_qhm3b")
+size = Vector3(6, 2, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1uih"]
+albedo_texture = ExtResource("2_2pvw8")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_78kd7"]
+material = SubResource("StandardMaterial3D_d1uih")
+left_to_right = 0.0
+size = Vector3(1, 1, 3)
+
+[node name="Map_Placeholder" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_3mlxh")
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_k803h")
+skeleton = NodePath("../..")
+
+[node name="Bush1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, 2.5)
+mesh = SubResource("PrismMesh_78kd7")
