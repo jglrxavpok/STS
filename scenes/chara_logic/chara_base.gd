@@ -31,7 +31,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y -= 20 * delta
 		_time_since_floor += delta
-		print(_time_since_floor)
 	
 	match _input_action:
 		Action.JUMP:

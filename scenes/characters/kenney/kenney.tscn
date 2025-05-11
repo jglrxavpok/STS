@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://okyo4drrphuu"]
 
-[ext_resource type="PackedScene" uid="uid://bsp037j32lvp1" path="res://scenes/characters/chara_base/chara_base.tscn" id="1_3fjdl"]
+[ext_resource type="PackedScene" uid="uid://bsp037j32lvp1" path="res://scenes/chara_logic/chara_base.tscn" id="1_3fjdl"]
 [ext_resource type="Script" uid="uid://cbpr4pmf43dic" path="res://scenes/characters/kenney/kenney.gd" id="2_waxpx"]
 [ext_resource type="Texture2D" uid="uid://b0y0v863k2he4" path="res://scenes/characters/kenney/kenney.png" id="3_crl6p"]
 
