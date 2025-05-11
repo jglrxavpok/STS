@@ -2,39 +2,41 @@ class_name CharaBase
 extends CharacterBody3D
 
 ## ================ CONFIGURATION ================
-## To be overriden for each character (= derived scenes).
+## To be overriden for each character (= derived scenes). Constant during gameplay.
 
 @export var speed: float = 10
 @export var coyote_time: float = 0.2
 
-## ================ SYNCHRONIZATION STATE ================
-## To be set explicitly by the authority's CharaDriver
-## and implicitly by the multiplayer replication.
+## ================ CONTROLS ================
 
-var sync_direction: float = 0 # between -1 (left) and +1 (right)
-var sync_jump_pressed: bool = false
+## To be set only by the client having authority:
+## dictates the character movements.
+var ctrl: CharaControl = null
 
 ## ================ INTERNAL STATE ================
 ## Only useful for CharaBase the client has authority over.
 
 var _time_since_floor: float = INF
 
-## ================ FUNCTIONS ================
+## ================ METHODS ================
 	
 func _physics_process(delta: float) -> void:
-	# Z-axis is irrelevant for physics
-	velocity.x = sync_direction * speed
-	velocity.z = 0
-	if is_on_floor():
-		velocity.y = 0
-		_time_since_floor = 0
-	else:
-		velocity.y -= 20 * delta
-		_time_since_floor += delta
+	if ctrl:
+		ctrl.update_chara_controls()
+		
+		# Z-axis is irrelevant for physics
+		velocity.x = ctrl.direction * speed
+		velocity.z = 0
+		if is_on_floor():
+			velocity.y = 0
+			_time_since_floor = 0
+		else:
+			velocity.y -= 20 * delta
+			_time_since_floor += delta
 
-	if sync_jump_pressed:
-		if _time_since_floor <= coyote_time:
-			velocity.y = 10
-			_time_since_floor = INF
+		if ctrl.pressed_jump:
+			if _time_since_floor <= coyote_time:
+				velocity.y = 10
+				_time_since_floor = INF
 
 	move_and_slide()

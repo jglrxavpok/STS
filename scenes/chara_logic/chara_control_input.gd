@@ -1,0 +1,2 @@
+class_name CharaControl_Input
+extends CharaControl

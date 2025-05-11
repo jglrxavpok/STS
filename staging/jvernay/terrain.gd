@@ -1,5 +1,8 @@
 extends WorldEnvironment
 
+func _ready():
+	$Kenney.ctrl = CharaControl.new()
+
 func _physics_process(delta: float) -> void:
 	$SpotLight3D.look_at($Kenney.position)
 
@@ -9,5 +12,5 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("player_move_right"):
 		dir += 1.0
 	
-	$Kenney.sync_direction = dir
-	$Kenney.sync_jump_pressed = Input.is_action_pressed("player_move_jump")
+	$Kenney.ctrl.direction = dir
+	$Kenney.ctrl.pressed_jump = Input.is_action_pressed("player_move_jump")
