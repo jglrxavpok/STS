@@ -8,6 +8,6 @@ func _physics_process(delta: float) -> void:
 		dir -= 1.0
 	if Input.is_action_pressed("player_move_right"):
 		dir += 1.0
-	if Input.is_action_pressed("player_move_jump"):
-		$Kenney.set_input_action(CharaBase.Action.JUMP)
-	$Kenney.set_input_direction(dir)
+	
+	$Kenney.sync_direction = dir
+	$Kenney.sync_jump_pressed = Input.is_action_pressed("player_move_jump")
