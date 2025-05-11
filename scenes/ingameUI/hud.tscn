@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://8mescl61mtsf"]
 
-[ext_resource type="PackedScene" uid="uid://b4ovuqdb0f3au" path="res://scenes/ui/player_hud.tscn" id="1_0mwgc"]
-[ext_resource type="Script" uid="uid://321bvrsvx0og" path="res://scenes/ui/hud.gd" id="1_hqnrr"]
+[ext_resource type="PackedScene" uid="uid://b4ovuqdb0f3au" path="res://scenes/ingameUI/player_hud.tscn" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://321bvrsvx0og" path="res://scenes/ingameUI/hud.gd" id="1_hqnrr"]
 
 [node name="Hud" type="Control"]
 layout_mode = 3

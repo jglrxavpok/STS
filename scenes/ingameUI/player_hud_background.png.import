@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccd65teabsstc"
-path="res://.godot/imported/player_hud_life.png-3a0f6b019be2e269fe5e529a025957a4.ctex"
+uid="uid://d0xnkhkidmjhd"
+path="res://.godot/imported/player_hud_background.png-807edfcdbfa6dea0704f34ff4ad99be8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/ui/player_hud_life.png"
-dest_files=["res://.godot/imported/player_hud_life.png-3a0f6b019be2e269fe5e529a025957a4.ctex"]
+source_file="res://scenes/ingameUI/player_hud_background.png"
+dest_files=["res://.godot/imported/player_hud_background.png-807edfcdbfa6dea0704f34ff4ad99be8.ctex"]
 
 [params]
 
