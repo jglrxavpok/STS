@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dl2k5xtdohuyw"]
 
-[ext_resource type="Script" uid="uid://ooowsm2ltbio" path="res://staging/jglrxavpok/player_cursor.gd" id="1_p83kf"]
-[ext_resource type="Texture2D" uid="uid://dy01vcvxonl2c" path="res://staging/jglrxavpok/character_portraits/waiting_for_join.png" id="2_p83kf"]
+[ext_resource type="Script" uid="uid://ooowsm2ltbio" path="res://scenes/UI/game_setup/player_cursor.gd" id="1_p83kf"]
+[ext_resource type="Texture2D" uid="uid://dy01vcvxonl2c" path="res://scenes/UI/game_setup/character_portraits/waiting_for_join.png" id="2_p83kf"]
 
 [node name="Player1" type="VBoxContainer"]
 z_index = 2

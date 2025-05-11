@@ -19,7 +19,7 @@ func handle_inputs() -> void:
 	for player in player_list:
 		if Input.is_action_just_pressed(player.get_input_full_name("menu")):
 			# TODO: change to proper filename
-			get_tree().change_scene_to_file("res://staging/jglrxavpok/map_selection/menu_map_selection.tscn")
+			get_tree().change_scene_to_file("res://scenes/UI/game_setup/map_selection/menu_map_selection.tscn")
 			break
 	
 	# handle player joining logic (leave is done in player_cursor.gd)

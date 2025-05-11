@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt8u4h24677ib"
-path="res://.godot/imported/level_3.png-9747e038eb06ff90f7f637253891554e.ctex"
+uid="uid://cf35tc3eeq4bd"
+path="res://.godot/imported/tux.png-2fd82f3af605276189fe3e8a7fc1a134.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://staging/jglrxavpok/map_selection/level_3.png"
-dest_files=["res://.godot/imported/level_3.png-9747e038eb06ff90f7f637253891554e.ctex"]
+source_file="res://scenes/UI/game_setup/character_portraits/tux.png"
+dest_files=["res://.godot/imported/tux.png-2fd82f3af605276189fe3e8a7fc1a134.ctex"]
 
 [params]
 

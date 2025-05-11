@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b4ovuqdb0f3au"]
 
-[ext_resource type="Texture2D" uid="uid://mya3d53u8fev" path="res://staging/jglrxavpok/character_portraits/suzanne_small.png" id="1_e6e0b"]
+[ext_resource type="Texture2D" uid="uid://mya3d53u8fev" path="res://scenes/UI/game_setup/character_portraits/suzanne_small.png" id="1_e6e0b"]
 [ext_resource type="Script" uid="uid://y1dpjyewpqd7" path="res://scenes/ingameUI/player_hud.gd" id="1_u7a8l"]
 [ext_resource type="Texture2D" uid="uid://d0xnkhkidmjhd" path="res://scenes/ingameUI/player_hud_background.png" id="1_u16pa"]
 [ext_resource type="Texture2D" uid="uid://ccd65teabsstc" path="res://scenes/ingameUI/player_hud_life.png" id="3_u7a8l"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf35tc3eeq4bd"
-path="res://.godot/imported/tux.png-5e86f6a56b73a192c5a63941d2a83749.ctex"
+uid="uid://dy01vcvxonl2c"
+path="res://.godot/imported/waiting_for_join.png-821f6b66c99286ad0036d8902bc6fc16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://staging/jglrxavpok/character_portraits/tux.png"
-dest_files=["res://.godot/imported/tux.png-5e86f6a56b73a192c5a63941d2a83749.ctex"]
+source_file="res://scenes/UI/game_setup/character_portraits/waiting_for_join.png"
+dest_files=["res://.godot/imported/waiting_for_join.png-821f6b66c99286ad0036d8902bc6fc16.ctex"]
 
 [params]
 

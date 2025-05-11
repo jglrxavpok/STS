@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jgejsmyqls46"
-path="res://.godot/imported/godette.png-a483a826c461d038308bf19d71bfb826.ctex"
+uid="uid://dp1liwwtmyhr1"
+path="res://.godot/imported/level_2.png-26ae284a9ab746446cb72f89d9988e0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://staging/jglrxavpok/character_portraits/godette.png"
-dest_files=["res://.godot/imported/godette.png-a483a826c461d038308bf19d71bfb826.ctex"]
+source_file="res://scenes/UI/game_setup/map_selection/level_2.png"
+dest_files=["res://.godot/imported/level_2.png-26ae284a9ab746446cb72f89d9988e0f.ctex"]
 
 [params]
 

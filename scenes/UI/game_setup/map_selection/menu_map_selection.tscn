@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://bsm6jfqgmub2k"]
 
-[ext_resource type="Script" uid="uid://clfpjgcrtfpau" path="res://staging/jglrxavpok/map_selection/menu_map_selection.gd" id="1_rt5dn"]
-[ext_resource type="Texture2D" uid="uid://diym4va3xsk56" path="res://staging/jglrxavpok/character_portraits/suzanne.png" id="2_2y3mc"]
-[ext_resource type="Texture2D" uid="uid://cf35tc3eeq4bd" path="res://staging/jglrxavpok/character_portraits/tux.png" id="3_0wm8v"]
-[ext_resource type="Texture2D" uid="uid://jgejsmyqls46" path="res://staging/jglrxavpok/character_portraits/godette.png" id="4_vntqb"]
-[ext_resource type="Texture2D" uid="uid://bnbc5dfm8to6s" path="res://staging/jglrxavpok/map_selection/level_1.png" id="5_hq1rf"]
-[ext_resource type="PackedScene" uid="uid://dvk6xenyv4hx8" path="res://staging/jglrxavpok/map_selection/map_icon.tscn" id="5_rt5dn"]
-[ext_resource type="Texture2D" uid="uid://dp1liwwtmyhr1" path="res://staging/jglrxavpok/map_selection/level_2.png" id="7_bh1tm"]
-[ext_resource type="Texture2D" uid="uid://dt8u4h24677ib" path="res://staging/jglrxavpok/map_selection/level_3.png" id="8_uy54v"]
+[ext_resource type="Script" uid="uid://clfpjgcrtfpau" path="res://scenes/UI/game_setup/map_selection/menu_map_selection.gd" id="1_rt5dn"]
+[ext_resource type="Texture2D" uid="uid://diym4va3xsk56" path="res://scenes/UI/game_setup/character_portraits/suzanne.png" id="2_2y3mc"]
+[ext_resource type="Texture2D" uid="uid://cf35tc3eeq4bd" path="res://scenes/UI/game_setup/character_portraits/tux.png" id="3_0wm8v"]
+[ext_resource type="Texture2D" uid="uid://jgejsmyqls46" path="res://scenes/UI/game_setup/character_portraits/godette.png" id="4_vntqb"]
+[ext_resource type="Texture2D" uid="uid://bnbc5dfm8to6s" path="res://scenes/UI/game_setup/map_selection/level_1.png" id="5_hq1rf"]
+[ext_resource type="PackedScene" uid="uid://dvk6xenyv4hx8" path="res://scenes/UI/game_setup/map_selection/map_icon.tscn" id="5_rt5dn"]
+[ext_resource type="Texture2D" uid="uid://dp1liwwtmyhr1" path="res://scenes/UI/game_setup/map_selection/level_2.png" id="7_bh1tm"]
+[ext_resource type="Texture2D" uid="uid://dt8u4h24677ib" path="res://scenes/UI/game_setup/map_selection/level_3.png" id="8_uy54v"]
 
 [node name="PlayerSelectionScreen" type="PanelContainer" node_paths=PackedStringArray("levels_container")]
 z_as_relative = false
