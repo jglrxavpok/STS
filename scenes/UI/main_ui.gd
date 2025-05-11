@@ -33,6 +33,7 @@ func _on_multi_lobby_host_pressed(host: String) -> void:
 func _on_multi_lobby_join_pressed(host: String) -> void:
 	join_pressed.emit(host)
 
-func _on_multi_logic_multiplayer_ready() -> void:
+func _on_multi_logic_multiplayer_ready(id: int) -> void:
 	$MultiLobby.hide()
 	$CharaSelect.show()
+	$CharaSelect.multiplayer_id = id

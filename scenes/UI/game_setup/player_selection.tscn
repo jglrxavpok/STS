@@ -6,8 +6,6 @@
 [node name="Player1" type="VBoxContainer"]
 z_index = 2
 script = ExtResource("1_p83kf")
-movement_speed = 500.0
-debounce_time = 0.1
 cursor_color = Color(1, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]

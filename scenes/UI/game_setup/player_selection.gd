@@ -4,6 +4,8 @@ extends PanelContainer
 @export var ready_container: Control
 var player_list: Array[PlayerSelection] = []
 
+var multiplayer_id: int = -1
+
 func _ready() -> void:
 	Inputs.reset_mappings()
 	for player in players_container.get_children():
