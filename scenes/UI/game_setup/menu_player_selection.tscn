@@ -97,17 +97,17 @@ character_id = "tux"
 layout_mode = 2
 character_id = "godette"
 
-[node name="Suzanne4" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+[node name="Kenney" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
 layout_mode = 2
-character_id = "suzanne"
+character_id = "kenney"
 
-[node name="Tux4" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+[node name="Kenney2" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
 layout_mode = 2
-character_id = "tux"
+character_id = "kenney"
 
-[node name="Godette4" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
+[node name="Kenney3" parent="VBoxContainer/PanelContainer/PlayerPortraits" instance=ExtResource("5_mre4x")]
 layout_mode = 2
-character_id = "godette"
+character_id = "kenney"
 
 [node name="Players" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
