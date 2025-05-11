@@ -19,3 +19,4 @@ spawn_path = NodePath("../Players")
 
 [connection signal="host_pressed" from="MainUI" to="MultiLogic" method="_on_main_ui_host_pressed"]
 [connection signal="join_pressed" from="MainUI" to="MultiLogic" method="_on_main_ui_join_pressed"]
+[connection signal="multiplayer_ready" from="MultiLogic" to="MainUI" method="_on_multi_logic_multiplayer_ready"]

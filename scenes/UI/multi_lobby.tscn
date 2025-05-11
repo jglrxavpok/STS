@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmaj8j0qw2ck1"]
 
-[ext_resource type="Script" uid="uid://dc8ddx26id0q3" path="res://staging/Nunwan/lobby.gd" id="1_ll2xe"]
-[ext_resource type="Theme" uid="uid://bj08t5383cugo" path="res://themes/STS.tres" id="1_nex18"]
+[ext_resource type="Theme" uid="uid://bj08t5383cugo" path="res://themes/STS.tres" id="1_r41dj"]
+[ext_resource type="Script" uid="uid://dc8ddx26id0q3" path="res://scenes/UI/multi_lobby.gd" id="2_v3ge2"]
 
 [node name="Lobby" type="Control"]
 layout_mode = 3
@@ -10,8 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_nex18")
-script = ExtResource("1_ll2xe")
+theme = ExtResource("1_r41dj")
+script = ExtResource("2_v3ge2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

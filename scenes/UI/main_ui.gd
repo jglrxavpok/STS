@@ -11,7 +11,7 @@ func toggle_menu():
 
 func _on_menu_local_mode_chosen() -> void:
 	toggle_menu()
-	$PlayerSelectionScreen.show()
+	$CharaSelect.show()
 
 func _on_menu_multi_mode_chosen() -> void:
 	toggle_menu()
@@ -24,7 +24,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		if not $Menu.visible:
 			$MultiLobby.hide()
-			$PlayerSelectionScreen.hide()
+			$CharaSelect.hide()
 			toggle_menu()
 
 func _on_multi_lobby_host_pressed(host: String) -> void:
@@ -32,3 +32,7 @@ func _on_multi_lobby_host_pressed(host: String) -> void:
 
 func _on_multi_lobby_join_pressed(host: String) -> void:
 	join_pressed.emit(host)
+
+func _on_multi_logic_multiplayer_ready() -> void:
+	$MultiLobby.hide()
+	$CharaSelect.show()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwoxlcok7ixkh"]
 
-[ext_resource type="PackedScene" uid="uid://bmaj8j0qw2ck1" path="res://staging/Nunwan/MultiLobby.tscn" id="1_u174s"]
+[ext_resource type="PackedScene" uid="uid://bmaj8j0qw2ck1" path="res://scenes/UI/multi_lobby.tscn" id="1_u174s"]
 [ext_resource type="PackedScene" uid="uid://wtbnvywkh1np" path="res://staging/Nunwan/Tux.tscn" id="2_lwuh0"]
 
 [node name="Nunwan" type="Node3D"]
