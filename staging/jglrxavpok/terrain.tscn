@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwyddd3qoy6k1"]
+
+[ext_resource type="Script" uid="uid://dpkilv758gb7a" path="res://staging/jglrxavpok/terrain.gd" id="1_wxrxs"]
+[ext_resource type="PackedScene" uid="uid://c2tpfw4h46si4" path="res://scenes/maps/placeholder/placeholder.tscn" id="2_gdyah"]
+[ext_resource type="PackedScene" uid="uid://okyo4drrphuu" path="res://scenes/characters/kenney/kenney.tscn" id="3_uegg3"]
+[ext_resource type="PackedScene" uid="uid://8mescl61mtsf" path="res://scenes/ingameUI/hud.tscn" id="4_aqodu"]
+
+[sub_resource type="Environment" id="Environment_ddngf"]
+background_mode = 1
+background_color = Color(0.461745, 0.691611, 0.88588, 1)
+background_energy_multiplier = 0.69
+
+[node name="JVernay" type="WorldEnvironment"]
+environment = SubResource("Environment_ddngf")
+script = ExtResource("1_wxrxs")
+kenney_scene = ExtResource("3_uegg3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, -6.42469e-08, 1.69384e-07, 1.8218e-08, 0.965926, 0.258819, -1.8024e-07, -0.258819, 0.965926, 0, 3, 7)
+current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, -3.1999e-08, -5.96047e-08, 5.96047e-08, -4.37114e-08, 1, -3.1999e-08, -1, -4.37114e-08, 4.76837e-07, 4, -4.26326e-14)
+light_energy = 8.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 63.68
+spot_angle_attenuation = 30.3144
+
+[node name="SunLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, -1.13133e-08, 0.258819, -0.258819, -4.2222e-08, 0.965926, 0, -1, -4.37114e-08, 0, 8, 0)
+light_energy = 0.2
+light_specular = 8.396
+
+[node name="CameraLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+light_energy = 0.3
+sky_mode = 1
+
+[node name="Map_Placeholder" parent="." instance=ExtResource("2_gdyah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="Hud" parent="." instance=ExtResource("4_aqodu")]

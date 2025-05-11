@@ -7,7 +7,7 @@ extends Control
 	$Players/Player4,
 ]
 
-func _ready() -> void:
+func setup() -> void:
 	for hud in player_huds:
 		hud.setup()
 

@@ -11,12 +11,16 @@ class_name PlayerHud
 ]
 
 func get_character_of_player(index: int) -> CharacterDesc:
-	# TODO
-	return Characters.get_from_id("suzanne")
+	return GameFlow.get_selected_character(index)
 
 func setup() -> void:
-	$PlayerNumber.text = str(player_index+1)
-	$CharacterIcon.texture = get_character_of_player(player_index).small_texture
+	var character_desc = get_character_of_player(player_index)
+	if character_desc != null:
+		$PlayerNumber.text = str(player_index+1)
+		$CharacterIcon.texture = character_desc.small_texture
+	else: # no associated player
+		$PlayerNumber.text = "$"
+		hide()
 
 func change_damage(new_damage: float) -> void:
 	$DamageIndicator.text = str(snapped(new_damage, 0.1)) + "%"

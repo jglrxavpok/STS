@@ -1,7 +1,7 @@
 extends WorldEnvironment
 
 func _ready():
-	$Kenney.ctrl = CharaControl_Input.new()
+	$Kenney.ctrl = CharaControl_Input.new(0)
 
 func _physics_process(delta: float) -> void:
 	$SpotLight3D.look_at($Kenney.position)

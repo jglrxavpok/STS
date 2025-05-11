@@ -24,12 +24,14 @@ func get_selected_character() -> CharacterPortrait:
 func unselect_character():
 	selected_index = -1
 	player_icon.texture = no_character_selected_texture
+	GameFlow.unselect_character(player_index)
 	
 func change_selected_player():
 	var hovered = get_hovered_character()
 	if(hovered != null):
 		selected_index = get_hovered_index()
 		player_icon.texture = hovered.character.big_texture
+		GameFlow.select_character(player_index, hovered.character.character_id)
 	
 func get_input_full_name(action_name: String):
 	return Inputs.get_player_input_name(player_index, action_name)

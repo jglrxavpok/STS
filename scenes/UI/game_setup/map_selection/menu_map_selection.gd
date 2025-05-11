@@ -13,7 +13,7 @@ func _on_cursor_back() -> void:
 	
 func _on_cursor_select() -> void:
 	# TODO: proper map
-	get_tree().change_scene_to_file("res://staging/jvernay/terrain.tscn")
+	get_tree().change_scene_to_file("res://staging/jglrxavpok/terrain.tscn")
 
 func get_icon_rect(icon: Control) -> Rect2:
 	var icon_pos = icon.get_global_transform().get_origin() - get_global_transform().get_origin()
