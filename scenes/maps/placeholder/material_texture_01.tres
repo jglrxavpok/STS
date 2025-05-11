@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dq21b7dk8w3gt"]
+
+[ext_resource type="Texture2D" uid="uid://bamlumdwg4u33" path="res://scenes/maps/placeholder/texture_01.png" id="1_eia2e"]
+
+[resource]
+albedo_texture = ExtResource("1_eia2e")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv2_scale = Vector3(6, 6, 6)

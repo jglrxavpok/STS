@@ -15,7 +15,7 @@ environment = SubResource("Environment_ddngf")
 script = ExtResource("1_ddngf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, -6.42469e-08, 1.69384e-07, -2.90524e-08, 0.866025, 0.5, -1.78814e-07, -0.5, 0.866025, 0, 3, 5)
+transform = Transform3D(1, -6.42469e-08, 1.69384e-07, 1.8218e-08, 0.965926, 0.258819, -1.8024e-07, -0.258819, 0.965926, 0, 3, 7)
 current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
@@ -26,10 +26,15 @@ spot_range = 10.0
 spot_angle = 63.68
 spot_angle_attenuation = 30.3144
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="SunLight" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.965926, -1.13133e-08, 0.258819, -0.258819, -4.2222e-08, 0.965926, 0, -1, -4.37114e-08, 0, 8, 0)
 light_energy = 0.2
 light_specular = 8.396
+
+[node name="CameraLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+light_energy = 0.3
+sky_mode = 1
 
 [node name="Map_Placeholder" parent="." instance=ExtResource("4_d0fn6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
