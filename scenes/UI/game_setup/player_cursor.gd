@@ -29,7 +29,7 @@ func change_selected_player():
 	var hovered = get_hovered_character()
 	if(hovered != null):
 		selected_index = get_hovered_index()
-		player_icon.texture = hovered.big_texture
+		player_icon.texture = hovered.character.big_texture
 	
 func get_input_full_name(action_name: String):
 	return Inputs.get_player_input_name(player_index, action_name)

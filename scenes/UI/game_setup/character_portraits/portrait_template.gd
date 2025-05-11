@@ -3,12 +3,11 @@ extends Control
 class_name CharacterPortrait
 
 # Texture used for the player selection (bottom of screen)
-@export var big_texture: Texture2D
-# Texture used for the character list
-@export var small_texture: Texture2D
-@export var character_name: String
+var character: CharacterDesc
+@export var character_id: String
 
 @onready var texture_rect = $TextureRect;
 
 func _ready():
-	texture_rect.texture = small_texture;
+	character = Characters.get_from_id(character_id)
+	texture_rect.texture = character.small_texture;

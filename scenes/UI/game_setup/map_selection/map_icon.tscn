@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvk6xenyv4hx8"]
 
-[ext_resource type="Texture2D" uid="uid://bnbc5dfm8to6s" path="res://scenes/UI/game_setup/map_selection/level_1.png" id="1_mcd6b"]
+[ext_resource type="Texture2D" uid="uid://bcvjda6ns150e" path="res://data/levels/level_1/thumbnail.png" id="1_mcd6b"]
 [ext_resource type="Script" uid="uid://dutrbplkxheq0" path="res://scenes/UI/game_setup/map_selection/map_icon.gd" id="1_tsbpj"]
 
 [node name="VBoxContainer" type="VBoxContainer"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jgejsmyqls46"
-path="res://.godot/imported/godette.png-63e3f1a25e575817cad6c8a7eb3c88e0.ctex"
+uid="uid://bcvjda6ns150e"
+path="res://.godot/imported/thumbnail.png-3c158fb72576c2820433718536b290c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/UI/game_setup/character_portraits/godette.png"
-dest_files=["res://.godot/imported/godette.png-63e3f1a25e575817cad6c8a7eb3c88e0.ctex"]
+source_file="res://data/levels/level_1/thumbnail.png"
+dest_files=["res://.godot/imported/thumbnail.png-3c158fb72576c2820433718536b290c1.ctex"]
 
 [params]
 

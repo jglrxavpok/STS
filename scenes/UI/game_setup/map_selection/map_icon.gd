@@ -2,10 +2,10 @@ extends VBoxContainer
 
 class_name MapIcon
 
-@export var displayed_name: String
-@export var scene_name: String
-@export var thumbnail: Texture2D
+@export var level_id: String
+var level: LevelDesc
 
 func _ready():
-	$Label.text = displayed_name
-	$TextureRect.texture = thumbnail
+	level = Levels.get_from_id(level_id)
+	$Label.text = level.displayed_name
+	$TextureRect.texture = level.thumbnail

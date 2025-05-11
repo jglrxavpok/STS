@@ -9,8 +9,7 @@ var row_count = 0
 var controlling_player = -1
 
 func _on_cursor_back() -> void:
-	# TODO: change to proper filename
-	get_tree().change_scene_to_file("res://staging/jglrxavpok/menu_player_selection.tscn")
+	get_tree().change_scene_to_file("res://scenes/UI/game_setup/menu_player_selection.tscn")
 	
 func _on_cursor_select() -> void:
 	# TODO: proper map
