@@ -10,5 +10,5 @@ var desc: CharacterDesc
 var damage: float = 0
 var life_count: int = 3
 
-func _init(desc: CharacterDesc) -> void:
-	self.desc = desc
+func _init(_desc: CharacterDesc) -> void:
+	self.desc = _desc

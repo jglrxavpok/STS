@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://rmg3chruyl4"]
 
 [ext_resource type="Script" uid="uid://chslppkifs2eh" path="res://scenes/UI/game_setup/character_portraits/portrait_template.gd" id="1_3n5hy"]
-[ext_resource type="Texture2D" uid="uid://stjm87fqv58e" path="res://data/characters/suzanne/small_icon.png" id="2_jw4oc"]
+[ext_resource type="Texture2D" uid="uid://stjm87fqv58e" path="res://scenes/characters/suzanne/small_icon.png" id="2_jw4oc"]
 
 [node name="Suzanne" type="Control"]
 custom_minimum_size = Vector2(100, 100)

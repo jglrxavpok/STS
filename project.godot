@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Inputs="*res://singletons/inputs.gd"
-Characters="*res://data/characters/character_list.gd"
-Levels="*res://data/levels/level_list.gd"
+Characters="*res://scenes/characters/character_list.gd"
+Levels="*res://scenes/maps/level_list.gd"
 GameFlow="*res://singletons/game_flow.gd"
 
 [display]

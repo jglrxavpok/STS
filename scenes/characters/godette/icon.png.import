@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv2lqwm3hnl8n"
-path="res://.godot/imported/small_icon.png-af474047b5860a12879869884615c1d6.ctex"
+uid="uid://bbok2r7kxgh5b"
+path="res://.godot/imported/icon.png-accd6b21ad9ef5a894208911fccae585.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/characters/kenney/small_icon.png"
-dest_files=["res://.godot/imported/small_icon.png-af474047b5860a12879869884615c1d6.ctex"]
+source_file="res://scenes/characters/godette/icon.png"
+dest_files=["res://.godot/imported/icon.png-accd6b21ad9ef5a894208911fccae585.ctex"]
 
 [params]
 

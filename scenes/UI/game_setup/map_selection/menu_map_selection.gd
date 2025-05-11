@@ -4,7 +4,6 @@ extends GenericCursor
 
 @onready var label: Label = $VBoxContainer/Label
 
-var levels: Array[String] = []
 var row_count = 0
 var controlling_player = -1
 
@@ -12,6 +11,7 @@ func _on_cursor_back() -> void:
 	get_tree().change_scene_to_file("res://scenes/UI/game_setup/menu_player_selection.tscn")
 	
 func _on_cursor_select() -> void:
+	GameFlow.selected_level = Levels.get_from_id((get_hovered_icon() as MapIcon).level_id)
 	# TODO: proper map
 	get_tree().change_scene_to_file("res://staging/jglrxavpok/terrain.tscn")
 
@@ -23,6 +23,7 @@ func get_icon_rect(icon: Control) -> Rect2:
 	return transformed_rect
 
 func _ready() -> void:
+	GameFlow.selected_level = null
 	var first_player = Inputs.find_first_player()
 	assert(first_player != -1, "We should not end up here with no player!")
 	controlling_player = first_player

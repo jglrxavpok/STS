@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbok2r7kxgh5b"
-path="res://.godot/imported/icon.png-bcecad608d7309136e60e9be6846f53c.ctex"
+uid="uid://bcf2ydloftr0y"
+path="res://.godot/imported/icon.png-2b3aa93982d09949225ad6997561a893.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/characters/godette/icon.png"
-dest_files=["res://.godot/imported/icon.png-bcecad608d7309136e60e9be6846f53c.ctex"]
+source_file="res://scenes/characters/suzanne/icon.png"
+dest_files=["res://.godot/imported/icon.png-2b3aa93982d09949225ad6997561a893.ctex"]
 
 [params]
 

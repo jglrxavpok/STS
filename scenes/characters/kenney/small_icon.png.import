@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o5ios7uajykm"
-path="res://.godot/imported/thumbnail.png-acb35b73f26ba9643d038b9753f9b6f0.ctex"
+uid="uid://dv2lqwm3hnl8n"
+path="res://.godot/imported/small_icon.png-293f63528cbbb2510ce6424892b122f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/levels/level_2/thumbnail.png"
-dest_files=["res://.godot/imported/thumbnail.png-acb35b73f26ba9643d038b9753f9b6f0.ctex"]
+source_file="res://scenes/characters/kenney/small_icon.png"
+dest_files=["res://.godot/imported/small_icon.png-293f63528cbbb2510ce6424892b122f0.ctex"]
 
 [params]
 

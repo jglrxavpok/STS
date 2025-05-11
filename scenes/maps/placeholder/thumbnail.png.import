@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcf2ydloftr0y"
-path="res://.godot/imported/icon.png-ef200491e01adb3dd9d22c792a69ad95.ctex"
+uid="uid://bcvjda6ns150e"
+path="res://.godot/imported/thumbnail.png-8d026965f4fffb796552b6b1a5550300.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/characters/suzanne/icon.png"
-dest_files=["res://.godot/imported/icon.png-ef200491e01adb3dd9d22c792a69ad95.ctex"]
+source_file="res://scenes/maps/placeholder/thumbnail.png"
+dest_files=["res://.godot/imported/thumbnail.png-8d026965f4fffb796552b6b1a5550300.ctex"]
 
 [params]
 

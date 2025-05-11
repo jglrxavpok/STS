@@ -2,6 +2,7 @@ extends Node
 
 # list of characters played, one per connected player (indexed via player_index)
 var _player_states: Array[PlayerState] = []
+var selected_level: LevelDesc
 
 func _init() -> void:
 	_player_states.resize(Inputs.player_count)

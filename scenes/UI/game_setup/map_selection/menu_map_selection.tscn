@@ -36,72 +36,72 @@ columns = 6
 
 [node name="level_1" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_1"
+level_id = "placeholder"
 
 [node name="level_2" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_1"
+level_id = "placeholder"
 
 [node name="level_3" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_1"
+level_id = "placeholder"
 
 [node name="level_4" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_1"
+level_id = "placeholder"
 
 [node name="level_5" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_1"
+level_id = "placeholder"
 
 [node name="level_6" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_1"
+level_id = "placeholder"
 
 [node name="level_7" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_2"
+level_id = "placeholder"
 
 [node name="level_8" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_2"
+level_id = "placeholder"
 
 [node name="level_9" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_2"
+level_id = "placeholder"
 
 [node name="level_10" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_2"
+level_id = "placeholder"
 
 [node name="level_11" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_2"
+level_id = "placeholder"
 
 [node name="level_12" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_2"
+level_id = "placeholder"
 
 [node name="level_13" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_3"
+level_id = "placeholder"
 
 [node name="level_14" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_3"
+level_id = "placeholder"
 
 [node name="level_15" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_3"
+level_id = "placeholder"
 
 [node name="level_16" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_3"
+level_id = "placeholder"
 
 [node name="level_17" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_3"
+level_id = "placeholder"
 
 [node name="level_18" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "level_3"
+level_id = "placeholder"

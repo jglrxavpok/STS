@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://y1dpjyewpqd7" path="res://scenes/ingameUI/player_hud.gd" id="1_u7a8l"]
 [ext_resource type="Texture2D" uid="uid://d0xnkhkidmjhd" path="res://scenes/ingameUI/player_hud_background.png" id="1_u16pa"]
-[ext_resource type="Texture2D" uid="uid://stjm87fqv58e" path="res://data/characters/suzanne/small_icon.png" id="3_p8wbv"]
+[ext_resource type="Texture2D" uid="uid://stjm87fqv58e" path="res://scenes/characters/suzanne/small_icon.png" id="3_p8wbv"]
 [ext_resource type="Texture2D" uid="uid://ccd65teabsstc" path="res://scenes/ingameUI/player_hud_life.png" id="3_u7a8l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hbwp2"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2ibnfv8eqnnm"
-path="res://.godot/imported/thumbnail.png-ee17e874c2463b5d8b21ddbd22df1de7.ctex"
+uid="uid://stjm87fqv58e"
+path="res://.godot/imported/small_icon.png-1aa561d3a0e969740354ffe44f28942a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/levels/level_3/thumbnail.png"
-dest_files=["res://.godot/imported/thumbnail.png-ee17e874c2463b5d8b21ddbd22df1de7.ctex"]
+source_file="res://scenes/characters/suzanne/small_icon.png"
+dest_files=["res://.godot/imported/small_icon.png-1aa561d3a0e969740354ffe44f28942a.ctex"]
 
 [params]
 
