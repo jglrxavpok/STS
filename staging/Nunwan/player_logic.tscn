@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://csdd3obqg1uir"]
+
+[ext_resource type="Script" uid="uid://dfhi8o3we03du" path="res://staging/Nunwan/player_logic.gd" id="1_psvnd"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_psvnd"]
+properties/0/path = NodePath(".:selected_character")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="PlayerLogic" type="Node"]
+script = ExtResource("1_psvnd")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_psvnd")

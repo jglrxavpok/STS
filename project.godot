@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="STS"
-run/main_scene="uid://bb30feyepgiw0"
+run/main_scene="uid://cfyoe7q6t651e"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

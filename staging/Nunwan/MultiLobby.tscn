@@ -44,6 +44,7 @@ theme_override_constants/separation = 61
 custom_minimum_size = Vector2(300, 15.957)
 layout_mode = 2
 size_flags_horizontal = 4
+text = "localhost"
 
 [node name="HSeparator2" type="HSeparator" parent="ColorRect/BoxContainer"]
 layout_mode = 2

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfyoe7q6t651e"]
+
+[ext_resource type="PackedScene" uid="uid://bb30feyepgiw0" path="res://scenes/UI/main_ui.tscn" id="1_i5o01"]
+[ext_resource type="Script" uid="uid://bk0tvnlqlks5w" path="res://scenes/UI/multi_logic.gd" id="2_ouv87"]
+
+[node name="STS" type="Node3D"]
+
+[node name="MainUI" parent="." instance=ExtResource("1_i5o01")]
+
+[node name="MultiLogic" type="Node" parent="." node_paths=PackedStringArray("node_to_spawn_player")]
+script = ExtResource("2_ouv87")
+node_to_spawn_player = NodePath("../Players")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="PlayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://csdd3obqg1uir")
+spawn_path = NodePath("../Players")
+
+[connection signal="host_pressed" from="MainUI" to="MultiLogic" method="_on_main_ui_host_pressed"]
+[connection signal="join_pressed" from="MainUI" to="MultiLogic" method="_on_main_ui_join_pressed"]

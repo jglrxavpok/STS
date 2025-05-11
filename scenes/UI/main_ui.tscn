@@ -29,3 +29,5 @@ layout_mode = 1
 [connection signal="local_mode_chosen" from="Menu" to="." method="_on_menu_local_mode_chosen"]
 [connection signal="multi_mode_chosen" from="Menu" to="." method="_on_menu_multi_mode_chosen"]
 [connection signal="training_mode_chosen" from="Menu" to="." method="_on_menu_training_mode_chosen"]
+[connection signal="host_pressed" from="MultiLobby" to="." method="_on_multi_lobby_host_pressed"]
+[connection signal="join_pressed" from="MultiLobby" to="." method="_on_multi_lobby_join_pressed"]
