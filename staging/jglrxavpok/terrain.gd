@@ -11,7 +11,12 @@ func _ready():
 #	GameFlow.select_character(0, "suzanne")
 #	GameFlow.select_character(1, "godette")
 	for p in GameFlow.get_connected_player_indices():
-		var instanced = kenney_scene.instantiate() as CharaBase
+		var character = GameFlow.get_selected_character(p)
+		var instanced: CharaBase
+		if character.scene != null:
+			instanced = character.scene.instantiate() as CharaBase
+		else:
+			instanced = kenney_scene.instantiate() as CharaBase
 		instanced.ctrl = CharaControl_Input.new(p)
 		add_child(instanced)
 		instanced.global_position = Vector3(1 * p, 0, 0)
