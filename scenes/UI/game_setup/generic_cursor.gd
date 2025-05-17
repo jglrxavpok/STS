@@ -12,8 +12,8 @@ func _on_cursor_back() -> void:
 
 @export var cursor_color: Color
 
-var hovered_cursor_pos = Vector2i(0, 0)
-var selected_index = -1
+@export var hovered_cursor_pos = Vector2i(0, 0) # exported for multiplayer
+@export var selected_index = -1 # exported for multiplayer
 var columns: int
 var rows: int
 var icons: Array[Control] = []
