@@ -30,3 +30,22 @@ func get_connected_player_indices() -> Array[int]:
 			list.append(player_index)
 			
 	return list
+	
+func _spawn_map_test():
+	var map = preload("res://scenes/maps/placeholder/placeholder.tscn").instantiate()
+	$/root/STS/Map.add_child(map)
+	
+func _spawn_charas_test():
+	pass
+	
+@rpc("any_peer", "call_local", "reliable")
+func game_launched():
+	$/root/STS/MainUI.visible = false
+	$/root/STS/MainUI.process_mode = PROCESS_MODE_DISABLED
+
+@rpc("any_peer", "call_local", "reliable")
+func launch_game_test():
+	if multiplayer.is_server():
+		_spawn_map_test()
+		_spawn_charas_test()
+		game_launched.rpc()

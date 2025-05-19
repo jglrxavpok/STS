@@ -3,6 +3,7 @@ extends PanelContainer
 @export var players_container: Control
 @export var ready_container: Control
 var player_list: Array[PlayerSelection] = []
+var press_start: bool
 
 func _ready() -> void:
 	Inputs.reset_mappings()
@@ -39,22 +40,21 @@ func _new_player_joined(player_index: int) -> void:
 	player_list[player_index].join()
 		
 func handle_inputs() -> void:
+	press_start = false
 	for player in player_list:
 		if Input.is_action_just_pressed(player.get_input_full_name("menu")):
-			# TODO: change to proper filename
-			get_tree().change_scene_to_file("res://scenes/UI/game_setup/map_selection/menu_map_selection.tscn")
-			break
+			press_start = true
 	
 	# handle player joining logic (leave is done in player_cursor.gd)
 	for gamepad_index in range(Inputs.player_count):
-		
-		# TODO: DEBUG ONLY FOR MULTI ON SAME MACHINE
-		if gamepad_index == 0 and not multiplayer.is_server():
-			continue
-		
-		if gamepad_index == 1 and multiplayer.is_server():
-			continue
-		# TODO: END OF DEBUG
+		if OS.has_feature("multi_test"):
+			# TODO: DEBUG ONLY FOR MULTI ON SAME MACHINE
+			if gamepad_index == 0 and not multiplayer.is_server():
+				continue
+			
+			if gamepad_index == 1 and multiplayer.is_server():
+				continue
+			# TODO: END OF DEBUG
 		
 		if Input.is_action_just_pressed(Inputs.get_gamepad_input_name(gamepad_index, "ui_select")):
 			if not Inputs.has_player_associated(gamepad_index):
@@ -75,3 +75,5 @@ func _process(delta: float) -> void:
 	ready_container.visible = all_ready
 	
 	handle_inputs()
+	if press_start and all_ready and OS.has_feature("map_test"):
+		GameFlow.launch_game_test.rpc()
