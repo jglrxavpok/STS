@@ -36,7 +36,14 @@ func _spawn_map_test():
 	$/root/STS/Map.add_child(map)
 	
 func _spawn_charas_test():
-	pass
+	var p = 0
+	for player in _player_states:
+		if player == null:
+			continue
+		var chara = player.desc.scene.instantiate()
+		chara.position = Vector3(1 * p, 0, 0)
+		p += 1
+		$/root/STS/Players.add_child(chara)
 	
 @rpc("any_peer", "call_local", "reliable")
 func game_launched():

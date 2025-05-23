@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsp037j32lvp1"]
+[gd_scene load_steps=4 format=3 uid="uid://bsp037j32lvp1"]
 
 [ext_resource type="Script" uid="uid://cvukjnfd47di0" path="res://scenes/chara_logic/chara_base.gd" id="1_clblc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lgyj2"]
 resource_local_to_scene = true
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_i6ay4"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="CharaBase" type="CharacterBody3D"]
 axis_lock_linear_z = true
@@ -14,3 +19,6 @@ script = ExtResource("1_clblc")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_lgyj2")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_i6ay4")
