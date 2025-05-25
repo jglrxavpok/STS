@@ -13,6 +13,7 @@ extends CharacterBody3D
 ## To be set only by the client having authority:
 ## dictates the character movements.
 var ctrl: CharaControl = null
+var player_index: int = -1
 
 ## ================ INTERNAL STATE ================
 ## Only useful for CharaBase the client has authority over.
@@ -50,3 +51,11 @@ func _physics_process(delta: float) -> void:
 		_previous_pressed_jump = ctrl.pressed_jump
 
 	move_and_slide()
+
+@rpc("any_peer", "call_local", "reliable")
+func set_player_index(_player_id: int) -> void:
+	player_index = _player_id
+	set_multiplayer_authority(GameFlow.get_player_auth(player_index))
+	if multiplayer.get_unique_id() == GameFlow.get_player_auth(player_index):
+		ctrl = CharaControl_Input.new(player_index)
+		print("set ctrl for %s pid %d aid %d" % [name, _player_id, multiplayer.get_unique_id()])

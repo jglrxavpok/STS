@@ -25,7 +25,7 @@ func _attempt_add_player(remote_gamepad_index: int):
 		var player_owner = multiplayer.get_remote_sender_id()
 		player_list[new_player_slot].set_multiplayer_authority(player_owner)
 		# tell everyone a new player joined
-		_new_player_joined.rpc(new_player_slot)
+		_new_player_joined.rpc(new_player_slot, player_owner)
 		# tell client that its attempt succeeded
 		_new_local_player_accepted.rpc_id(player_owner, new_player_slot, remote_gamepad_index)
 
@@ -36,8 +36,9 @@ func _new_local_player_accepted(player_index: int, local_gamepad_index: int) -> 
 		
 # called by server when a new player joins, from any client
 @rpc("authority", "call_local", "reliable")
-func _new_player_joined(player_index: int) -> void:
+func _new_player_joined(player_index: int, player_owner: int) -> void:
 	player_list[player_index].join()
+	GameFlow.set_player_auth(player_index, player_owner)
 		
 func handle_inputs() -> void:
 	press_start = false

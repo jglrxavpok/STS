@@ -22,3 +22,5 @@ shape = SubResource("CapsuleShape3D_lgyj2")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_i6ay4")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
