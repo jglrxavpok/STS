@@ -12,6 +12,8 @@ var player_index: int
 var direction: float = 0
 
 var pressed_jump: bool = false
+var pressed_physical_attack: bool = false
+var pressed_special_attack: bool = false
 
 ## ================ METHODS ================
 func _init(player_index: int) -> void:

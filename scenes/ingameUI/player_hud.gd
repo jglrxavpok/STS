@@ -3,6 +3,7 @@ extends Control
 class_name PlayerHud
 
 @export var player_index: int
+var old_damage = -1
 
 @onready var hearts = [
 	$Lives/Life1,
@@ -21,11 +22,19 @@ func setup() -> void:
 	else: # no associated player
 		$PlayerNumber.text = "$"
 		hide()
+		
+func _process(delta: float) -> void:
+	if player_index == -1:
+		return
+	var state = GameFlow.get_player_state(player_index)
+	if state == null:
+		return
+	var damage = state.damage
+	if damage != old_damage:
+		old_damage = damage
+		$DamageIndicator.text = str(snapped(damage, 0.1)) + "%"	
+		# TODO: play anim?
 
-func change_damage(new_damage: float) -> void:
-	$DamageIndicator.text = str(snapped(new_damage, 0.1)) + "%"
-	# TODO: play anim?
-	
 func set_life_count(life_count: int) -> void:
 	for i in range(hearts.size()):
 		if i <= life_count:

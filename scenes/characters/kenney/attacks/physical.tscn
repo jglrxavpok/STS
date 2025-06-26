@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://2vv36glxhhrp"]
+
+[ext_resource type="Texture2D" uid="uid://bamlumdwg4u33" path="res://scenes/maps/placeholder/texture_01.png" id="1_6pywy"]
+[ext_resource type="Script" uid="uid://bheid1jairbgj" path="res://scenes/characters/kenney/attacks/physical.gd" id="2_bb3df"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3ypd"]
+size = Vector3(10.301, 10.2181, 1)
+
+[node name="physical" type="Node3D" node_paths=PackedStringArray("effect_zone")]
+transform = Transform3D(-0.106913, 0, 0, 0, -0.103092, 0.264967, 0, 0.0283285, 0.964257, 0, 0, 0)
+script = ExtResource("2_bb3df")
+effect_zone = NodePath("EffectZone")
+follow_attacker = true
+duration = 0.2
+
+[node name="EffectZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.83943, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EffectZone"]
+transform = Transform3D(1, 0, 0, 0, 0.999998, 7.15256e-07, 0, -4.47035e-08, 1, -0.000519753, 0.0231017, 2.56114e-09)
+shape = SubResource("BoxShape3D_p3ypd")
+
+[node name="visual" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 2.38419e-07, 0, 0, 1, -9.83943, 0, 0)
+texture = ExtResource("1_6pywy")
+
+[connection signal="body_entered" from="EffectZone" to="." method="_on_effect_zone_body_entered"]

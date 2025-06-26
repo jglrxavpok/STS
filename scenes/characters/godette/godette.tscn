@@ -11,6 +11,7 @@ height = 1.0
 
 [node name="Godette" instance=ExtResource("1_a1wpb")]
 script = ExtResource("2_eirqu")
+character_id = "godette"
 
 [node name="Collider" parent="." index="0"]
 shape = SubResource("CapsuleShape3D_waxpx")

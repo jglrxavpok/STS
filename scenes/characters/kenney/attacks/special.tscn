@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://8l0caplxnix0"]
+
+[ext_resource type="Script" uid="uid://bwys3mwko12td" path="res://scenes/characters/kenney/attacks/special.gd" id="1_r6e0r"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oocpa"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_r6e0r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncu11"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="special" type="Node3D"]
+script = ExtResource("1_r6e0r")
+
+[node name="EffectZone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EffectZone"]
+shape = SubResource("SphereShape3D_oocpa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_r6e0r")
+surface_material_override/0 = SubResource("StandardMaterial3D_ncu11")
+
+[connection signal="body_entered" from="EffectZone" to="." method="_on_effect_zone_body_entered"]
