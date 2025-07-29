@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bol4nhixp6dpm"]
+
+[ext_resource type="Texture2D" uid="uid://db8r78tcao2g8" path="res://scenes/maps/kenney_platformer/background_clouds.png" id="1_v8ltt"]
+[ext_resource type="Texture2D" uid="uid://c6b3860t38soq" path="res://scenes/maps/kenney_platformer/background_fade_trees.png" id="2_gnd5t"]
+[ext_resource type="Material" uid="uid://dq21b7dk8w3gt" path="res://scenes/maps/placeholder/material_texture_01.tres" id="3_gnd5t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ngaxk"]
+material = ExtResource("3_gnd5t")
+size = Vector3(10, 2, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ce04h"]
+size = Vector3(10, 2, 6)
+
+[node name="Root" type="Node3D"]
+
+[node name="BackgroundUp" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.76303, -2)
+texture = ExtResource("1_v8ltt")
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 256)
+
+[node name="BackgroundDown" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212238, -2)
+texture = ExtResource("2_gnd5t")
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 256)
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_ngaxk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_ce04h")
