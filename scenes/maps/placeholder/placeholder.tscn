@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2tpfw4h46si4"]
+[gd_scene load_steps=10 format=3 uid="uid://c2tpfw4h46si4"]
 
 [ext_resource type="Material" uid="uid://dq21b7dk8w3gt" path="res://scenes/maps/placeholder/material_texture_01.tres" id="1_d1uih"]
 [ext_resource type="Texture2D" uid="uid://b1bcqcmpi5vic" path="res://scenes/maps/placeholder/texture_10.png" id="2_2pvw8"]
+[ext_resource type="Script" uid="uid://b07ycxuytcw3m" path="res://addons/sts-platform-plugin/sts-platform.gd" id="3_d1uih"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_k803h"]
 material = ExtResource("1_d1uih")
@@ -29,12 +30,20 @@ points = PackedVector3Array(-0.5, 0.5, -3, 0.5, -0.5, 3, 0.5, -0.5, 3, 0.5, -0.5
 
 [node name="Root" type="Node3D"]
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="STS_Platform2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("3_d1uih")
+points = Array[Vector3]([Vector3(-5, 0, 0), Vector3(5, 0, 0)])
+metadata/_custom_type_script = "uid://b07ycxuytcw3m"
+
+[node name="Ground" type="MeshInstance3D" parent="STS_Platform2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 mesh = SubResource("BoxMesh_k803h")
+skeleton = NodePath("../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+[node name="StaticBody3D" type="StaticBody3D" parent="STS_Platform2/Ground"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="STS_Platform2/Ground/StaticBody3D"]
 shape = SubResource("BoxShape3D_2pvw8")
 
 [node name="Bush1" type="MeshInstance3D" parent="."]
@@ -42,12 +51,18 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 1.
 mesh = SubResource("PrismMesh_78kd7")
 skeleton = NodePath("")
 
-[node name="Platform" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 8.9407e-08, -1, 2.66454e-15, 1, 8.9407e-08, 4.37114e-08, 6, 3, 0)
+[node name="STS_Platform" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 4, 0)
+script = ExtResource("3_d1uih")
+points = Array[Vector3]([Vector3(-3, 0, 0), Vector3(3, 0, 0)])
+metadata/_custom_type_script = "uid://b07ycxuytcw3m"
+
+[node name="Platform" type="MeshInstance3D" parent="STS_Platform"]
+transform = Transform3D(-4.37114e-08, 0, 1, 8.9407e-08, -1, 2.66454e-15, 1, 8.9407e-08, 4.37114e-08, 0, -0.5, 0)
 mesh = SubResource("PrismMesh_d1uih")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Platform"]
+[node name="StaticBody3D" type="StaticBody3D" parent="STS_Platform/Platform"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="STS_Platform/Platform/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_2pvw8")
