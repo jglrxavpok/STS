@@ -43,16 +43,14 @@ func _redraw(gizmo: EditorNode3DGizmo) -> void:
 
 	var node: STS_Platform = gizmo.get_node_3d()
 	
-	#var handles = PackedVector3Array()
 	var prev = null
 	for pt in node.points:
-		#handles.push_back(pt)
+		var pt3 = Vector3(pt.x, pt.y, 0)
 		if prev != null:
-			# Godot makes the gizmo line translucid...
-			_add_gizmo_line(gizmo, prev, pt, 0.3)
-			_add_gizmo_line(gizmo, prev, pt, 0.3)
-			_add_gizmo_line(gizmo, prev, pt, 0.3)
-		prev = pt
+			# Godot makes the gizmo line translucid; twice to make it more opaque
+			_add_gizmo_line(gizmo, prev, pt3, 0.3)
+			_add_gizmo_line(gizmo, prev, pt3, 0.3)
+		prev = pt3
 
 
 	#gizmo.add_lines(lines, get_material("main", gizmo), false)

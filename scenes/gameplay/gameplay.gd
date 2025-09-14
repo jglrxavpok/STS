@@ -24,7 +24,7 @@ func _ready():
 			instanced = kenney_scene.instantiate() as CharaBase
 		instanced.ctrl = CharaControl_Input.new(p)
 		add_child(instanced)
-		instanced.global_position = Vector3(1 * p, 0, 0)
+		instanced.global_position = Vector3(1 * p, 5, 0)
 		
 	# once all players are added, we can map the HUD to these players
 	$Hud.setup()
