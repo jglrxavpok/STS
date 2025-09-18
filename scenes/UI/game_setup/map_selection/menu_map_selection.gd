@@ -33,7 +33,7 @@ func _ready() -> void:
 func get_input_full_name(action_name: String) -> String:
 	return Inputs.get_player_input_name(controlling_player, action_name)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	queue_redraw()
 	handle_movement(
 		Input.is_action_just_pressed(get_input_full_name("ui_left")),

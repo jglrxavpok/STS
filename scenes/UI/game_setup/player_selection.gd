@@ -34,7 +34,7 @@ func handle_inputs() -> void:
 					player_list[new_player_slot].join()
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Check if all players have selected a character
 	var all_ready = true
 	var joined_count = 0

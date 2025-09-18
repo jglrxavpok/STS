@@ -36,7 +36,7 @@ func change_selected_player():
 func get_input_full_name(action_name: String):
 	return Inputs.get_player_input_name(player_index, action_name)
 	
-func handle_inputs(delta: float):
+func handle_inputs(_delta: float):
 	handle_movement(
 		Input.is_action_just_pressed(get_input_full_name("ui_left")),
 		Input.is_action_just_pressed(get_input_full_name("ui_right")),

@@ -11,7 +11,7 @@ func _ready():
 func on_join_game(id: int):
 	multiplayer_ready.emit(id)
 
-func _on_main_ui_host_pressed(host: String) -> void:
+func _on_main_ui_host_pressed(_host: String) -> void:
 	epeer.create_server(PORT)
 	multiplayer.multiplayer_peer = epeer
 	on_join_game(1)
