@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkt20bvfuuvic"]
+[gd_scene load_steps=4 format=3 uid="uid://bkt20bvfuuvic"]
 
-[ext_resource type="PackedScene" uid="uid://bsp037j32lvp1" path="res://scenes/chara_logic/chara_base.tscn" id="1_a1wpb"]
 [ext_resource type="Script" uid="uid://b6o0s6byudeqf" path="res://scenes/characters/godette/godette.gd" id="2_eirqu"]
 [ext_resource type="PackedScene" uid="uid://prhru4sacvcg" path="res://scenes/characters/godette/assets/godette.glb" id="3_xfidp"]
 
@@ -9,11 +8,16 @@ resource_local_to_scene = true
 radius = 0.4
 height = 1.0
 
-[node name="Godette" instance=ExtResource("1_a1wpb")]
+[node name="Godette" type="CharacterBody3D"]
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+velocity = Vector3(0, -1503.7002, 0)
 script = ExtResource("2_eirqu")
 
-[node name="Collider" parent="." index="0"]
+[node name="Collider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_waxpx")
 
-[node name="3DMesh" parent="." index="1" instance=ExtResource("3_xfidp")]
+[node name="3DMesh" parent="." instance=ExtResource("3_xfidp")]
 transform = Transform3D(-5.72904e-08, 0, 1.31065, 0, 1.31065, 0, -1.31065, 0, -5.72904e-08, 0, -0.494531, 0)

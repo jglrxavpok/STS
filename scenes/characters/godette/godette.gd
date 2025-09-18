@@ -1,8 +1,9 @@
-extends CharaBase
+@tool
+extends STS_Character
 
 var dir = 1
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if velocity.x > 0:
 		dir = 1
 	elif velocity.x < 0:
