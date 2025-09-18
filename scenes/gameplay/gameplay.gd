@@ -17,17 +17,17 @@ func _ready():
 	
 	for p in GameFlow.get_connected_player_indices():
 		var character = GameFlow.get_selected_character(p)
-		var instanced: CharaBase
+		var instanced: STS_Character
 		if character.scene != null:
-			instanced = character.scene.instantiate() as CharaBase
+			instanced = character.scene.instantiate() as STS_Character
 		else:
-			instanced = kenney_scene.instantiate() as CharaBase
-		instanced.ctrl = CharaControl_Input.new(p)
+			instanced = kenney_scene.instantiate() as STS_Character
+		instanced.add_child(CharaControl_Input.new(p))
 		add_child(instanced)
 		instanced.global_position = Vector3(1 * p, 5, 0)
 		
 	# once all players are added, we can map the HUD to these players
 	$Hud.setup()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	pass
