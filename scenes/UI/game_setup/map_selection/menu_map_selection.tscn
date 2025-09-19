@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsm6jfqgmub2k"]
+[gd_scene load_steps=4 format=3 uid="uid://bsm6jfqgmub2k"]
 
 [ext_resource type="Script" uid="uid://clfpjgcrtfpau" path="res://scenes/UI/game_setup/map_selection/menu_map_selection.gd" id="1_rt5dn"]
+[ext_resource type="Texture2D" uid="uid://db8r78tcao2g8" path="res://scenes/maps/kenney_platformer/background_clouds.png" id="3_8whfm"]
 [ext_resource type="PackedScene" uid="uid://dvk6xenyv4hx8" path="res://scenes/UI/game_setup/map_selection/map_icon.tscn" id="5_rt5dn"]
 
 [node name="LevelSelectionScreen" type="PanelContainer" node_paths=PackedStringArray("levels_container")]
@@ -56,7 +57,7 @@ level_id = "placeholder"
 
 [node name="level_6" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
-level_id = "placeholder"
+level_id = "kenney_platformer"
 
 [node name="level_7" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
@@ -105,3 +106,7 @@ level_id = "placeholder"
 [node name="level_18" parent="VBoxContainer/PanelContainer/Levels" instance=ExtResource("5_rt5dn")]
 layout_mode = 2
 level_id = "placeholder"
+
+[node name="BackgroundUp" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.76303, 0)
+texture = ExtResource("3_8whfm")

@@ -12,8 +12,7 @@ func _on_cursor_back() -> void:
 	
 func _on_cursor_select() -> void:
 	GameFlow.selected_level = Levels.get_from_id((get_hovered_icon() as MapIcon).level_id)
-	# TODO: proper map
-	get_tree().change_scene_to_file("res://staging/jglrxavpok/terrain.tscn")
+	get_tree().change_scene_to_file("res://scenes/gameplay/gameplay.tscn")
 
 func get_icon_rect(icon: Control) -> Rect2:
 	var icon_pos = icon.get_global_transform().get_origin() - get_global_transform().get_origin()
@@ -34,7 +33,7 @@ func _ready() -> void:
 func get_input_full_name(action_name: String) -> String:
 	return Inputs.get_player_input_name(controlling_player, action_name)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	queue_redraw()
 	handle_movement(
 		Input.is_action_just_pressed(get_input_full_name("ui_left")),

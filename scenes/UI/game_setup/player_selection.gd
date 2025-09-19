@@ -62,7 +62,7 @@ func handle_inputs() -> void:
 				_attempt_add_player.rpc_id(1, gamepad_index) # ask server to add my player
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Check if all players have selected a character
 	var all_ready = true
 	var joined_count = 0

@@ -2,26 +2,25 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crn8dvbufeli"
-path.s3tc="res://.godot/imported/godette_Sophia_gloss.png-996ac9ed360a8aa44aa6c00249720f3f.s3tc.ctex"
+uid="uid://d2y106ccwm3tr"
+path.s3tc="res://.godot/imported/sts-platform-icon.png-b703cf033b13ec6e0506bc1654eb4ee7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "ee46193cbd25a7b7a8fcfda5018dc73f"
-}
 
 [deps]
 
-source_file="res://scenes/characters/godette/assets/godette_Sophia_gloss.png"
-dest_files=["res://.godot/imported/godette_Sophia_gloss.png-996ac9ed360a8aa44aa6c00249720f3f.s3tc.ctex"]
+source_file="res://addons/sts-platform-plugin/sts-platform-icon.png"
+dest_files=["res://.godot/imported/sts-platform-icon.png-b703cf033b13ec6e0506bc1654eb4ee7.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -29,6 +28,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
