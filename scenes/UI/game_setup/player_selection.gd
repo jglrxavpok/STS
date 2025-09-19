@@ -76,5 +76,5 @@ func _process(_delta: float) -> void:
 	ready_container.visible = all_ready
 	
 	handle_inputs()
-	if press_start and all_ready and OS.has_feature("map_test"):
+	if press_start and all_ready: # and OS.has_feature("map_test"):
 		GameFlow.launch_game_test.rpc()

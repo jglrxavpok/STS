@@ -49,7 +49,7 @@ func _spawn_charas_test():
 		if player == null:
 			continue
 		var chara = player.desc.scene.instantiate()
-		chara.position = Vector3(1 * player_index, 0, 0)
+		chara.position = Vector3(1 * player_index, 5, 0)
 		chara.name = "Chara player %s %d" % [player.desc.character_id, player_index]
 		$/root/STS/Players.add_child(chara)
 		chara.set_player_index.rpc(player_index)
